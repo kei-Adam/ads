@@ -1,0 +1,105 @@
+{
+  "version": "2.0",
+  "note": "Expand to 7 types × 10 cases + 20% exceptions before release",
+  "cases": [
+    {
+      "post_type": "morning",
+      "scenario": "minimum_verification",
+      "expected_guard": "Do not invent facts; require essential state verification",
+      "expected_output": [
+        "title_candidates",
+        "body_candidates",
+        "image_edit_plan",
+        "publishable",
+        "missing_verified_fields"
+      ]
+    },
+    {
+      "post_type": "clock_in",
+      "scenario": "minimum_verification",
+      "expected_guard": "Do not invent facts; require essential state verification",
+      "expected_output": [
+        "title_candidates",
+        "body_candidates",
+        "image_edit_plan",
+        "publishable",
+        "missing_verified_fields"
+      ]
+    },
+    {
+      "post_type": "clock_out",
+      "scenario": "minimum_verification",
+      "expected_guard": "Do not invent facts; require essential state verification",
+      "expected_output": [
+        "title_candidates",
+        "body_candidates",
+        "image_edit_plan",
+        "publishable",
+        "missing_verified_fields"
+      ]
+    },
+    {
+      "post_type": "thank_you",
+      "scenario": "minimum_verification",
+      "expected_guard": "Do not invent facts; require essential state verification",
+      "expected_output": [
+        "title_candidates",
+        "body_candidates",
+        "image_edit_plan",
+        "publishable",
+        "missing_verified_fields"
+      ]
+    },
+    {
+      "post_type": "mygirl_video",
+      "scenario": "minimum_verification",
+      "expected_guard": "Do not invent facts; require essential state verification",
+      "expected_output": [
+        "title_candidates",
+        "body_candidates",
+        "image_edit_plan",
+        "publishable",
+        "missing_verified_fields"
+      ]
+    },
+    {
+      "post_type": "freepost",
+      "scenario": "minimum_verification",
+      "expected_guard": "Do not invent facts; require essential state verification",
+      "expected_output": [
+        "title_candidates",
+        "body_candidates",
+        "image_edit_plan",
+        "publishable",
+        "missing_verified_fields"
+      ]
+    },
+    {
+      "post_type": "waiting",
+      "scenario": "minimum_verification",
+      "expected_guard": "Do not invent facts; require essential state verification",
+      "expected_output": [
+        "title_candidates",
+        "body_candidates",
+        "image_edit_plan",
+        "publishable",
+        "missing_verified_fields"
+      ]
+    },
+    {
+      "post_type": "waiting",
+      "scenario": "availability older than 5 minutes",
+      "expected_publishable": false
+    },
+    {
+      "post_type": "mygirl_video",
+      "scenario": "video pending but claims published",
+      "expected_publishable": false
+    },
+    {
+      "post_type": "freepost",
+      "scenario": "review thank-you mode",
+      "expected_publishable": false
+    }
+  ]
+}
