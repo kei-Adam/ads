@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ads Diary Request",
+  "type": "object",
+  "required": [
+    "post_type",
+    "persona",
+    "source_facts",
+    "asset",
+    "consent"
+  ],
+  "properties": {
+    "post_type": {
+      "enum": [
+        "morning",
+        "clock_in",
+        "clock_out",
+        "thank_you",
+        "mygirl_video",
+        "freepost",
+        "waiting"
+      ]
+    },
+    "persona": {
+      "type": "object",
+      "required": [
+        "voice_style"
+      ],
+      "properties": {
+        "voice_style": {
+          "type": "string"
+        },
+        "emoji_style": {
+          "type": "string"
+        },
+        "banned_phrases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "source_facts": {
+      "type": "object",
+      "description": "Only verified facts; unknown values null or absent",
+      "properties": {
+        "note": {
+          "type": "string"
+        },
+        "shift_status": {
+          "enum": [
+            "confirmed",
+            "unconfirmed",
+            "not_scheduled"
+          ]
+        },
+        "clock_in_confirmed": {
+          "type": "boolean"
+        },
+        "clock_out_confirmed": {
+          "type": "boolean"
+        },
+        "meeting_confirmed": {
+          "type": "boolean"
+        },
+        "availability_confirmed": {
+          "type": "boolean"
+        },
+        "availability_checked_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "video_status": {
+          "enum": [
+            "published",
+            "scheduled",
+            "pending",
+            "none"
+          ]
+        },
+        "freepost_status": {
+          "enum": [
+            "published",
+            "scheduled",
+            "pending",
+            "none"
+          ]
+        },
+        "booking_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "required": [
+        "asset_id",
+        "consent_verified"
+      ],
+      "properties": {
+        "asset_id": {
+          "type": "string"
+        },
+        "consent_verified": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "string"
+        },
+        "image_or_video": {
+          "enum": [
+            "image",
+            "video"
+          ]
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "bytes": {
+          "type": "integer"
+        }
+      }
+    },
+    "consent": {
+      "type": "object",
+      "required": [
+        "confirmed",
+        "age_18_plus"
+      ],
+      "properties": {
+        "confirmed": {
+          "type": "boolean"
+        },
+        "age_18_plus": {
+          "type": "boolean"
+        }
+      }
+    },
+    "visibility": {
+      "enum": [
+        "public",
+        "mygirl"
+      ]
+    },
+    "posting_mode": {
+      "enum": [
+        "normal",
+        "freepost",
+        "review_thank_you"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
