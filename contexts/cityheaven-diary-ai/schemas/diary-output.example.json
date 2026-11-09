@@ -1,0 +1,25 @@
+{
+  "title_candidates": [
+    "出勤したよ☺️",
+    "今日もよろしくね",
+    "お知らせです"
+  ],
+  "body_candidates": [
+    "出勤しました。最新の受付状況はお店の予約ページで確認してね。"
+  ],
+  "image_edit_plan": {
+    "preset": "CLEAN_OUTFIT",
+    "size": "1080x1920",
+    "consent_checked": true
+  },
+  "publishable": false,
+  "missing_verified_fields": [
+    "availability_confirmed"
+  ],
+  "review_notes": [
+    "No available slots should be claimed without fresh verification"
+  ],
+  "verification": {
+    "shift_status": "confirmed"
+  }
+}
